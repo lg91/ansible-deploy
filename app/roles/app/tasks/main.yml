@@ -1,0 +1,4 @@
+---
+- name: download app from repository
+  get_url: url={{ app_path }} dest=/usr/share/jboss/standalone/deployments/mvc.war
+  

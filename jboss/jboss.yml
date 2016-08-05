@@ -1,0 +1,8 @@
+---
+# This playbook deploys a simple JBoss server.
+
+- hosts: jboss-servers
+  remote_user: root
+
+  roles:
+    - jboss
