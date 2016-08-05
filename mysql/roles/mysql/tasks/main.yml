@@ -17,7 +17,7 @@
     - /opt/MySQL-client-5.6.28-1.linux_glibc2.5.x86_64.rpm
 
 - name: create new mysql secuert password
-  command: chdir=/usr/bin/mysql_install_db
+  command: /usr/bin/mysql_install_db
 
 - name: delete config
   command: sudo rm -rf /etc/my.cnf
@@ -30,7 +30,5 @@
 
 - name: run mysql shell
   script: /opt/mysql.sh
-
-- name: enable mysql to be started at boot
-  service: name=mysql enabled=yes state=started
+  notify: restart mysql
 
