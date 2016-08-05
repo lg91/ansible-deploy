@@ -27,7 +27,6 @@
 
 - name: copy the mysql script
   copy: src=mysql.sh dest=/opt mode=0755
-
 - name: run mysql shell
   script: /opt/mysql.sh
   notify: restart mysql
